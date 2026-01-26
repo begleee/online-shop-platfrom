@@ -1,0 +1,11 @@
+{
+  "HomePage": {
+    "title": "Everything you need, in one place.",
+    "callToAction": "Shop now"
+  },
+  "Navigation": {
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About"
+  }
+}

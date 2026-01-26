@@ -1,0 +1,26 @@
+.container {
+  margin: 3rem;
+}
+
+.title {
+  margin-top: 15%;
+  font-size: 3.5rem;
+  font-weight: bolder;
+  max-width: 40%;
+  line-height: 4rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.call-to-action {
+  margin-top: 2rem;
+  max-width: fit-content;
+  cursor: pointer;
+}
+
+.main {
+  background-color: #fff;
+}

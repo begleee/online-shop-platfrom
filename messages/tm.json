@@ -1,0 +1,11 @@
+{
+  "HomePage": {
+    "title": "Gerek zatlaryň ahlisi bir ýerde.",
+    "callToAction": "Söwda etmek"
+  },
+  "Navigation": {
+    "home": "Esasy",
+    "shop": "Dukan",
+    "about": "Biz barada"
+  }
+}
