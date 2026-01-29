@@ -1,10 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import './global.css'
-import { ThemeProvider } from "@/src/components/theme-provider";
-import Navigation from "@/src/components/Navigation/Navigation";
+import { ThemeProvider } from "@/components/theme-provider";
+import Navigation from "@/components/Navigation";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from "next/navigation";
 import { locales } from "@/src/i18n/config";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,7 +45,10 @@ export default async function RootLayout({
             disableTransitionOnChange
           >
             <Navigation/>
-            {children}
+            <div className="m-12">
+              {children}
+              <Footer/>
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

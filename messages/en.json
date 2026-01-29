@@ -1,11 +1,38 @@
 {
   "HomePage": {
     "title": "Everything you need, in one place.",
-    "callToAction": "Shop now"
+    "callToAction": "Shop now",
+    "aboutMe": "About me",
+    "updates": "Recieve Special Offers and Get Our Latest Updates."
   },
   "Navigation": {
     "home": "Home",
     "shop": "Shop",
     "about": "About"
+  },
+  "HomeAccordion": {
+    "title": "Why you’ll love using our platform",
+    "items": {
+      "simple": {
+        "title": "Simple and intuitive experience",
+        "description": "Everything is designed to be clear and easy to use, so you can focus on finding the right product."
+      },
+      "fast": {
+        "title": "Fast and responsive",
+        "description": "Pages load quickly and interactions feel smooth on any device."
+      },
+      "transparent": {
+        "title": "Transparent pricing",
+        "description": "What you see is what you pay — no hidden fees or last-minute surprises."
+      },
+      "smart": {
+        "title": "Smart product discovery",
+        "description": "Well-organized categories and helpful details make choosing easier."
+      },
+      "secure": {
+        "title": "Secure and reliable",
+        "description": "Your data is protected using modern security standards."
+      }
+    }
   }
 }

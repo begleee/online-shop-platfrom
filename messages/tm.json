@@ -1,11 +1,38 @@
 {
   "HomePage": {
     "title": "Gerek zatlaryň ahlisi bir ýerde.",
-    "callToAction": "Söwda etmek"
+    "callToAction": "Söwda etmek",
+    "aboutMe": "Men barada",
+    "updates": "Ýörite teklipleri alyň we iň soňky täzelenmelerimizi alyň."
   },
   "Navigation": {
     "home": "Esasy",
     "shop": "Dukan",
     "about": "Biz barada"
+  },
+  "HomeAccordion": {
+    "title": "Почему вам понравится наша платформа",
+    "items": {
+      "simple": {
+        "title": "Простой и удобный интерфейс",
+        "description": "Всё создано так, чтобы вы могли легко найти нужный товар."
+      },
+      "fast": {
+        "title": "Быстро и отзывчиво",
+        "description": "Страницы загружаются быстро и работают плавно на любом устройстве."
+      },
+      "transparent": {
+        "title": "Прозрачные цены",
+        "description": "Никаких скрытых платежей и неожиданных комиссий."
+      },
+      "smart": {
+        "title": "Удобный поиск товаров",
+        "description": "Чёткая структура и полезная информация помогают сделать выбор."
+      },
+      "secure": {
+        "title": "Безопасно и надёжно",
+        "description": "Мы используем современные стандарты защиты данных."
+      }
+    }
   }
 }
