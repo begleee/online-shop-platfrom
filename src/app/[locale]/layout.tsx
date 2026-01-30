@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from "next/navigation";
 import { locales } from "@/src/i18n/config";
 import Footer from "@/components/Footer";
+import ReactQueryProvider from "../../providers/react-query-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,19 +38,21 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <NextIntlClientProvider messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <NextIntlClientProvider messages={messages}>
+          <ReactQueryProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
             <Navigation/>
             <div className="m-12">
               {children}
               <Footer/>
             </div>
-          </ThemeProvider>
+            </ThemeProvider>
+          </ReactQueryProvider>
         </NextIntlClientProvider>
       </body>
     </html>
