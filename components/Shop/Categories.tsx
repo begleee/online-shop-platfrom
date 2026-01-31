@@ -1,16 +1,35 @@
-import { Button } from "../ui/button";
+'use client'
 
-const CATEGORIES = ["Women", "Men", "Children", "Food", "Sport", "Home", "Electronics"];
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/src/store/store";
+import { useProducts } from "@/src/hooks/useProducts";
+import { Button } from "../ui/button";
+import { setCategory } from "@/src/store/filtersSlice";
 
 export default function Categories() {
-  console.log(CATEGORIES.length)
+  const dispatch = useDispatch();
+  const selectedCategory = useSelector((state: RootState) => state.filters.selectedCategory);
+  const { data: products = [] } = useProducts();
+  const categories = Array.from(new Set(products.map((p) => p.category)));
   return (
     <div>
       <p className="text-2xl font-bold">Categories</p>
-      <div className="mt-8 grid grid-cols-4 gap-2">
+      <div className="mt-8 grid grid-cols-4 gap-4">
+        <Button 
+          onClick={() => dispatch(setCategory(null))} 
+          className="font-bold hover:scale-[101%] cursor-pointer capitalize" 
+          variant="outline"
+        >
+            All
+        </Button>
         {
-          CATEGORIES.map((category) => (
-              <Button className="font-bold hover:scale-[101%] cursor-pointer" variant="outline" key={category}>
+          categories.map((category) => (
+              <Button 
+                className="font-bold hover:scale-[101%] cursor-pointer capitalize" 
+                variant="outline" 
+                key={category}
+                onClick={() => dispatch(setCategory(category))}
+              >
                 {category}
               </Button>
           ))

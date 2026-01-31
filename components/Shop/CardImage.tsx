@@ -25,11 +25,11 @@ export function CardImage({title, description, imgSrc, price}: {title: string, d
           <Badge variant="secondary">${price}</Badge>
         </CardAction>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>
+        {/* <CardDescription>
           {description}
-        </CardDescription>
+        </CardDescription> */}
       </CardHeader>
-      <CardFooter>
+      <CardFooter className="mt-auto">
         <Button className="w-full">View</Button>
       </CardFooter>
     </Card>
