@@ -1,27 +1,25 @@
 'use client'
 
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/src/store/store";
+import { useDispatch } from "react-redux";
 import { useProducts } from "@/src/hooks/useProducts";
 import { Button } from "../ui/button";
 import { setCategory } from "@/src/store/filtersSlice";
 
 export default function Categories() {
   const dispatch = useDispatch();
-  const selectedCategory = useSelector((state: RootState) => state.filters.selectedCategory);
-  const { data: products = [] } = useProducts();
+  const { data: products = [], isLoading } = useProducts();
   const categories = Array.from(new Set(products.map((p) => p.category)));
   return (
     <div>
       <p className="text-2xl font-bold">Categories</p>
       <div className="mt-8 grid grid-cols-4 gap-4">
-        <Button 
+        {!isLoading && <Button 
           onClick={() => dispatch(setCategory(null))} 
           className="font-bold hover:scale-[101%] cursor-pointer capitalize" 
           variant="outline"
         >
             All
-        </Button>
+        </Button>}
         {
           categories.map((category) => (
               <Button 
