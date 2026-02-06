@@ -12,7 +12,7 @@ import { SortingType } from "@/types/product";
 import { setSorting } from "@/src/store/filtersSlice";
 import { RootState } from "@/src/store/store";
 
-export default function FilterDropdown() {
+export default function SortDropdown() {
   const dispatch = useDispatch();
   const currentSorting = useSelector((state: RootState) => state.filters.selectedSort);
 
@@ -23,12 +23,12 @@ export default function FilterDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Filter by</Button>
+        <Button variant="outline">Sort by</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="py-2">
         <DropdownMenuGroup>
           <DropdownMenuLabel className="font-bold">
-            Alphabetic
+            Name
           </DropdownMenuLabel>
           <div className="px-2">
             <DropdownMenuItem 

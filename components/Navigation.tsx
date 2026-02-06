@@ -5,6 +5,7 @@ import { ModeToggle } from "./ui/mode-toggle";
 import { LangToggle } from "./ui/lang-toggle";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import Cart from "./Shop/Cart";
 
 const PATHS = ["home", "shop", "about"];
 
@@ -12,6 +13,14 @@ export default function Navigation(){
   const t = useTranslations("Navigation");
   const pathname = usePathname();
   const locale = useLocale();
+
+  let cart;
+
+  if(pathname.replace(`/${locale}`, "") == '/shop') {
+    cart = <Cart/>
+  }
+
+  console.log();
 
   const isActive = (href: string) => {
     const pathWithoutLocale = pathname.replace(`/${locale}`, "") || "/";
@@ -39,6 +48,7 @@ export default function Navigation(){
           <ModeToggle/>
           <LangToggle/>
         </div>
+        {cart}
       </NavigationMenu>
   )
 }
