@@ -21,15 +21,17 @@ import {
 } from "@/src/store/cartSlice"
 import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "@/src/store/store"
+import { useTranslations } from "next-intl"
 
 export default function Cart() {
-  const dispatch = useDispatch()
-  const cartItems = useSelector((state: RootState) => state.cart.items)
+  const t = useTranslations("Shop.Cart");
+  const dispatch = useDispatch();
+  const cartItems = useSelector((state: RootState) => state.cart.items);
 
   const total = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
-  )
+  );
 
   return (
     <div className="absolute top-20 right-20">
@@ -47,13 +49,13 @@ export default function Cart() {
 
         <DialogContent className="max-w-md">
           <DialogHeader>
-            <DialogTitle>Your Cart</DialogTitle>
+            <DialogTitle>{t("title")}</DialogTitle>
           </DialogHeader>
 
           <ScrollArea className="max-h-75 pr-4">
             {cartItems.length === 0 && (
               <p className="text-sm text-muted-foreground">
-                Your cart is empty
+                {t("empty")}
               </p>
             )}
 
@@ -118,14 +120,14 @@ export default function Cart() {
           <Separator />
 
           <div className="flex items-center justify-between">
-            <span className="font-semibold">Total</span>
+            <span className="font-semibold">{t("total")}</span>
             <span className="text-lg font-bold">
               ${total.toFixed(2)}
             </span>
           </div>
 
           <Button className="w-full">
-            Pay
+            {t("pay")}
           </Button>
         </DialogContent>
       </Dialog>

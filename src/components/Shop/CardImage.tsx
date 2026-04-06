@@ -19,6 +19,7 @@ import { DialogTrigger } from "@radix-ui/react-dialog";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/src/store/cartSlice";
 import { Toaster, toast } from "sonner";
+import { useTranslations } from "next-intl"
 
 interface CardImageProps {
   id: number;
@@ -44,6 +45,7 @@ export function CardImage({
   category,
   id
 }: CardImageProps) {
+  const t = useTranslations("Shop.Card");
   const dispatch = useDispatch();
 
   const product: ProductCart = { id, title, price, image };
@@ -62,7 +64,7 @@ export function CardImage({
           <img
             src={image}
             alt={title}
-            className="relative aspect-video w-full object-contain brightness-60 grayscale dark:brightness-40 p-4"
+            className="relative aspect-video w-full object-contain"
           />
         </picture>
 
@@ -75,7 +77,7 @@ export function CardImage({
 
         <CardFooter className="mt-auto">
           <DialogTrigger asChild>
-            <Button className="w-full">View</Button>
+            <Button className="w-full">{t("viewDetails")}</Button>
           </DialogTrigger>
         </CardFooter>
       </Card>
@@ -103,7 +105,7 @@ export function CardImage({
           </DialogDescription>
 
           <Button className="w-full" onClick={handleAdd}>
-            Add to cart
+            {t("addToCart")}
           </Button>
           <Toaster theme="dark" position="top-center"/>
         </div>

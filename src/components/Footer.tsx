@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col gap-3">
-        <p className="font-bold mb-1">Links</p>
+        <p className="font-bold mb-1">{tNav("links")}</p>
         <Link className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors" href="/">{tNav('home')}</Link>
         <Link className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors" href="/shop">{tNav('shop')}</Link>
         <Link className="text-sm text-muted-foreground hover:text-primary hover:underline transition-colors" href="/about">{tNav('about')}</Link>
@@ -46,10 +46,10 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row gap-2 mt-4">
           <Input 
             type="email" 
-            placeholder="Email here" 
+            placeholder={t("emailPlaceholder")}
             className="bg-background"
           />
-          <Button className="w-full sm:w-auto">Join</Button>
+          <Button className="w-full sm:w-auto">{t("join")}</Button>
         </div>
       </form>
     </footer>

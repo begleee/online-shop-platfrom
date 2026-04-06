@@ -3,13 +3,16 @@
     "title": "Gerekli zatlaryň ählisi bir ýerde.",
     "callToAction": "Söwda etmek",
     "aboutMe": "Men barada",
-    "updates": "Ýörite teklipleri we iň soňky täzelenmeleri alyň."
+    "updates": "Ýörite teklipleri we iň soňky täzelenmeleri alyň.",
+    "join": "Gatnaşmak",
+    "emailPlaceholder":"Emailiňizi şu ýere giriziň"
   },
   "Navigation": {
     "home": "Baş sahypa",
     "shop": "Dükan",
     "about": "Men barada",
-    "settings": "Sazlamalar"
+    "settings": "Sazlamalar",
+    "links": "Baglanyşyklar"
   },
   "HomeAccordion": {
     "title": "Näme üçin biziň platformamyzy gowy görersiňiz?",
@@ -44,7 +47,17 @@
       "sortName": "Ady boýunça",
       "sortPrice": "Bahasy boýunça",
       "ascending": "arzandan gymmada",
-      "descending": "gymmatdan arzana"
+      "descending": "gymmatdan arzana",
+      "Card": {
+          "addToCart": "Sebede goş",
+          "viewDetails": "Jikme-jiklikleri görmek"
+        },
+        "Cart": {
+          "title": "Siziň Sebediňiz",
+          "total": "Jemi",
+          "pay": "Tölemek",
+          "empty": "Siziň sebediňiz boş"
+        }
   },
   "About": {
     "greeting": "Salam, men Begli",

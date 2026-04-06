@@ -3,13 +3,16 @@
     "title": "Everything you need, in one place.",
     "callToAction": "Shop now",
     "aboutMe": "About me",
-    "updates": "Recieve Special Offers and Get Our Latest Updates."
+    "updates": "Recieve Special Offers and Get Our Latest Updates.",
+    "join": "Join",
+    "emailPlaceholder":"Email here"
   },
   "Navigation": {
     "home": "Home",
     "shop": "Shop",
     "about": "About",
-    "settings": "Settings"
+    "settings": "Settings",
+    "links": "Links"
   },
   "HomeAccordion": {
     "title": "Why you’ll love using our platform",
@@ -44,7 +47,17 @@
     "sortName": "Name",
     "sortPrice": "Price",
     "ascending": "ascending",
-    "descending": "descending"
+    "descending": "descending",
+    "Card": {
+      "addToCart": "Add to cart",
+      "viewDetails": "View details"
+    },
+    "Cart": {
+      "title": "Your Cart",
+      "total": "Total",
+      "pay": "Pay",
+      "empty": "Your cart is empty"
+    }
   },
   "About": {
     "greeting": "Hi, I'm Begli",
