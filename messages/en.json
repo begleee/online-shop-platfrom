@@ -50,7 +50,8 @@
     "descending": "descending",
     "Card": {
       "addToCart": "Add to cart",
-      "viewDetails": "View details"
+      "viewDetails": "View details",
+      "added": "Added to cart"
     },
     "Cart": {
       "title": "Your Cart",

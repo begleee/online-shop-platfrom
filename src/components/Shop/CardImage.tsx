@@ -52,7 +52,7 @@ export function CardImage({
 
   function handleAdd() {
     dispatch(addToCart(product));
-    toast.success("Added to cart");
+    toast.success(t("added"));
   }
 
   return (
