@@ -1,31 +1,39 @@
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Product } from "@/types/product";
+'use client'
+import { Badge } from "@/src/components/ui/badge"
+import { Button } from "@/src/components/ui/button"
 import {
   Card,
   CardAction,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/src/components/ui/card"
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+} from "@/src/components/ui/dialog"
+import { DialogTrigger } from "@radix-ui/react-dialog";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/src/store/cartSlice";
-import { Toaster } from "sonner";
-import { toast } from "sonner";
+import { Toaster, toast } from "sonner";
+
+interface CardImageProps {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  price: number;
+  category: string;
+}
 
 type ProductCart = {
-  id: string,
-  title: string,
-  price: number,
-  image: string
+  id: number;
+  title: string;
+  price: number;
+  image: string;
 }
 
 export function CardImage({
@@ -35,16 +43,14 @@ export function CardImage({
   price,
   category,
   id
-}: Product) {
+}: CardImageProps) {
   const dispatch = useDispatch();
 
-  const stringId = id.toString();
-
-  const product: ProductCart = { id: stringId, title, price, image};
+  const product: ProductCart = { id, title, price, image };
 
   function handleAdd() {
     dispatch(addToCart(product));
-    toast("Added to cart");
+    toast.success("Added to cart");
   }
 
   return (
@@ -64,7 +70,7 @@ export function CardImage({
           <CardAction>
             <Badge variant="secondary">${price}</Badge>
           </CardAction>
-          <CardTitle>{title}</CardTitle>
+          <CardTitle className="truncate">{title}</CardTitle>
         </CardHeader>
 
         <CardFooter className="mt-auto">
@@ -74,14 +80,13 @@ export function CardImage({
         </CardFooter>
       </Card>
 
-      {/* Dialog content */}
       <DialogContent>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>
-          <DialogDescription className="flex gap-4">
+          <div className="flex gap-4 mt-2">
               <Badge variant="outline">${price}</Badge>
               <Badge variant="outline">{category}</Badge>
-          </DialogDescription>
+          </div>
         </DialogHeader>
 
         <div className="space-y-4">
@@ -93,10 +98,9 @@ export function CardImage({
             />
           </picture>
 
-
-          <p className="text-sm text-muted-foreground">
+          <DialogDescription className="text-sm text-muted-foreground">
             {description}
-          </p>
+          </DialogDescription>
 
           <Button className="w-full" onClick={handleAdd}>
             Add to cart

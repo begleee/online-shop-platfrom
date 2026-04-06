@@ -1,4 +1,4 @@
-import Shop from "@/components/Shop/Shop";
+import Shop from "@/src/components/Shop/Shop";
 
 export default function ShopSection() {
   return (  

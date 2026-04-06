@@ -1,38 +1,55 @@
 {
   "HomePage": {
-    "title": "Gerek zatlaryň ahlisi bir ýerde.",
+    "title": "Gerekli zatlaryň ählisi bir ýerde.",
     "callToAction": "Söwda etmek",
     "aboutMe": "Men barada",
-    "updates": "Ýörite teklipleri alyň we iň soňky täzelenmelerimizi alyň."
+    "updates": "Ýörite teklipleri we iň soňky täzelenmeleri alyň."
   },
   "Navigation": {
-    "home": "Esasy",
-    "shop": "Dukan",
-    "about": "Biz barada"
+    "home": "Baş sahypa",
+    "shop": "Dükan",
+    "about": "Men barada",
+    "settings": "Sazlamalar"
   },
   "HomeAccordion": {
-    "title": "Почему вам понравится наша платформа",
+    "title": "Näme üçin biziň platformamyzy gowy görersiňiz?",
     "items": {
       "simple": {
-        "title": "Простой и удобный интерфейс",
-        "description": "Всё создано так, чтобы вы могли легко найти нужный товар."
+        "title": "Ýönekeý we amatly interfeýs",
+        "description": "Ähli zat zerur harydy aňsatlyk bilen tapmagyňyz üçin döredildi."
       },
       "fast": {
-        "title": "Быстро и отзывчиво",
-        "description": "Страницы загружаются быстро и работают плавно на любом устройстве."
+        "title": "Çalt we duýgur",
+        "description": "Sahypalar çalt ýüklenýär we islendik enjamda bökdençsiz işleýär."
       },
       "transparent": {
-        "title": "Прозрачные цены",
-        "description": "Никаких скрытых платежей и неожиданных комиссий."
+        "title": "Açyk bahalar",
+        "description": "Hiç hili gizlin tölegler ýa-da garaşylmadyk komissiýalar ýok."
       },
       "smart": {
-        "title": "Удобный поиск товаров",
-        "description": "Чёткая структура и полезная информация помогают сделать выбор."
+        "title": "Harytlaryň amatly gözlegi",
+        "description": "Aýdyň gurluş we peýdaly maglumatlar saýlamaga kömek edýär."
       },
       "secure": {
-        "title": "Безопасно и надёжно",
-        "description": "Мы используем современные стандарты защиты данных."
+        "title": "Howpsuz we ygtybarly",
+        "description": "Biz maglumatlary goramagyň döwrebap standartlaryny ulanýarys."
       }
     }
+  },
+  "Shop": {
+      "categories": "Kategoriýalar",
+      "all": "Hemmesi",
+      "recomendations": "Maslahat berilýänler",
+      "sort": "tertiplemek",
+      "sortName": "Ady boýunça",
+      "sortPrice": "Bahasy boýunça",
+      "ascending": "arzandan gymmada",
+      "descending": "gymmatdan arzana"
+  },
+  "About": {
+    "greeting": "Salam, men Begli",
+    "projectSubtitle": "Bu meniň Next.js-de döreden \"Onlaýn dükan platformasy\" atly şahsy taslamam",
+    "techTitle": "Ulanylan tehnologiýalar:",
+    "contactTitle": "Habarlaşmak üçin:"
   }
 }

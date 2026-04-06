@@ -4,15 +4,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+} from "@/src/components/ui/dialog";
+import { Button } from "@/src/components/ui/button";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/src/components/ui/card";
 
 type Product = {
   id: string;
@@ -62,7 +62,6 @@ export function ProductCard({ product, onAddToCart }: Props) {
         </CardFooter>
       </Card>
 
-      {/* Dialog content */}
       <DialogContent className="max-w-lg">
         <DialogHeader>
           <DialogTitle>{product.title}</DialogTitle>

@@ -4,16 +4,16 @@ import {
   Minus,
   Trash,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/src/components/ui/button"
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { Separator } from "@/components/ui/separator"
+} from "@/src/components/ui/dialog"
+import { ScrollArea } from "@/src/components/ui/scroll-area"
+import { Separator } from "@/src/components/ui/separator"
 import {
   increaseQuantity,
   decreaseQuantity,

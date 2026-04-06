@@ -1,11 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import './global.css'
 import { ThemeProvider } from "@/src/providers/theme-provider";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/src/components/Navigation";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from "next/navigation";
 import { locales } from "@/src/i18n/config";
-import Footer from "@/components/Footer";
+import Footer from "@/src/components/Footer";
 import ReactQueryProvider from "../../providers/react-query-provider";
 import ReduxProvider from "@/src/providers/redux-provider";
 
@@ -24,7 +24,7 @@ export default async function RootLayout({
   params
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await (params);
 

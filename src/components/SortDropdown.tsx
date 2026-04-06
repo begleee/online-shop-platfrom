@@ -5,14 +5,17 @@ import {
   DropdownMenuItem, 
   DropdownMenuLabel, 
   DropdownMenuTrigger 
-} from "@/components/ui/dropdown-menu";
+} from "@/src/components/ui/dropdown-menu";
 import { Button } from "./ui/button";
 import { useDispatch, useSelector } from "react-redux";
 import { SortingType } from "@/types/product";
 import { setSorting } from "@/src/store/filtersSlice";
 import { RootState } from "@/src/store/store";
+import { useTranslations } from "next-intl";
 
 export default function SortDropdown() {
+  const t = useTranslations("Shop");
+  
   const dispatch = useDispatch();
   const currentSorting = useSelector((state: RootState) => state.filters.selectedSort);
 
@@ -23,12 +26,12 @@ export default function SortDropdown() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Sort by</Button>
+        <Button variant="outline">{t("sort")}</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="py-2">
         <DropdownMenuGroup>
           <DropdownMenuLabel className="font-bold">
-            Name
+            {t("sortName")}
           </DropdownMenuLabel>
           <div className="px-2">
             <DropdownMenuItem 
@@ -47,20 +50,20 @@ export default function SortDropdown() {
         </DropdownMenuGroup>
         <DropdownMenuGroup>
           <DropdownMenuLabel className="font-bold">
-            Price
+            {t("sortPrice")}
           </DropdownMenuLabel>
           <div className="px-2 flex flex-col gap-2">
             <DropdownMenuItem 
               onClick={() => hanldeClick("price_asc")}
               className={currentSorting === "price_asc" ? "bg-accent font-bold" : ""}
             >
-              ascending
+              {t("ascending")}
             </DropdownMenuItem>
             <DropdownMenuItem 
               onClick={() => hanldeClick("price_desc")}
               className={currentSorting === "price_desc" ? "bg-accent font-bold" : ""}
             >
-              descending
+              {t("descending")}
             </DropdownMenuItem>
           </div>
         </DropdownMenuGroup>

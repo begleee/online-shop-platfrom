@@ -8,7 +8,8 @@
   "Navigation": {
     "home": "Home",
     "shop": "Shop",
-    "about": "About"
+    "about": "About",
+    "settings": "Settings"
   },
   "HomeAccordion": {
     "title": "Why you’ll love using our platform",
@@ -34,5 +35,21 @@
         "description": "Your data is protected using modern security standards."
       }
     }
+  },
+  "Shop": {
+    "categories": "Categories",
+    "all": "All",
+    "recomendations": "Recommendations",
+    "sort": "sort by",
+    "sortName": "Name",
+    "sortPrice": "Price",
+    "ascending": "ascending",
+    "descending": "descending"
+  },
+  "About": {
+    "greeting": "Hi, I'm Begli",
+    "projectSubtitle": "This is my pet project \"Online Shop Platform\" built with Next.js",
+    "techTitle": "Technologies used:",
+    "contactTitle": "Contact me:"
   }
 }
